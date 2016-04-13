@@ -72,8 +72,8 @@ Basic steps:
 
 ##Testing Framework Outline
 Step 1: Generating random samples for testing:
-    - Split the data based on the Mouse Day Cycle
-    - Number the splits and use numpy.random to subset from these splits
+- Split the data based on the Mouse Day Cycle
+- Number the splits and use numpy.random to subset from these splits
 
 Step 2: Conduct Lomb-Scargle (LS) test to detect the period. Implement the three different models onto the certain period and get the patterns/ estimated coefficients for the model.
 
