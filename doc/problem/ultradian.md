@@ -63,7 +63,7 @@ Basic steps:
     4. Determine the “random” term
 
 - Longitudinal data analysis.
-   - Attempts for mixed models：
+    - Attempts for mixed models：
          - The mixed model is frequently used for longitudinal analysis. We should specify the random effects and fixed effects first, such as the IS/AS condition, the purpose of the active: like  food or water and any other important features. Then we  can use linear mixed model to get the pattern of the movements in different time period.
          - Statsmodels.api package can be used to decompose the dataset we have. 
 - Autocorrelation analysis. 
