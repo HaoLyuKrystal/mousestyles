@@ -45,15 +45,21 @@ Ultradian rhythm is widely observed in mammalian behavioural patterns. Ultradian
 Seasonal decomposition is a very common method used in time series analysis. One of the main objectives for a decomposition is to estimate seasonal effects that can be used to create and present seasonally adjusted values. 
 
 Two basic structures are commonly used:
+
     1. Additive:  x_t = Trend + Seasonal + Random
+
     2. Multiplicative:  x_t= Trend * Seasonal * Random
 
 The “Random” term is often called “Irregular” in software for decompositions.
 
 Basic steps:
+
     1. Estimate the trend
+
     2. “De-trend” the data
+
     3. Estimate seasonal factors by using the “de-trended” series
+
     4. Determine the “random” term
 
 - Longitudinal data analysis.
@@ -66,8 +72,8 @@ Basic steps:
 
 ##Testing Framework Outline
 Step 1: Generating random samples for testing:
-         - Split the data based on the Mouse Day Cycle
-         - Number the splits and use numpy.random to subset from these splits
+    - Split the data based on the Mouse Day Cycle
+    - Number the splits and use numpy.random to subset from these splits
 
 Step 2: Conduct Lomb-Scargle (LS) test to detect the period. Implement the three different models onto the certain period and get the patterns/ estimated coefficients for the model.
 
