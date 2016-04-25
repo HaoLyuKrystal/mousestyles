@@ -34,7 +34,13 @@ Here's the long and short of it:
 
       git checkout -b contributing-issue#14
 
-   * Commit locally as you progress (``git add`` and ``git commit``)
+     See `tools/bash-and-git.sh`,
+     which contains useful configurations for visualizing and
+     keeping track of branches more easily.
+
+   * Commit locally as you progress (``git add`` and ``git
+     commit``). It is highly recommended that you use the provided
+     pre-commit hook (described in the `tools README <https://https://github.com/berkeley-stat222/mousestyles/blob/master/tools/README.md>`_), which automatically runs tests and style checks before every commit. This way, you can see if Travis (described below) will fail before you push.
 
 3. To submit your contribution:
 
@@ -49,21 +55,21 @@ Here's the long and short of it:
      <https://github.com/berkeley-stat222/mousestyles/issues/issue#*number*>`_ to explain your changes or
      to ask for review.
 
-For a more detailed discussion, read these :doc:`detailed documents
-<gitwash/index>` on how to use Git with ``mousestyles``
-(`<http://berkeley-stat222.github.io/mousestyles/dev/gitwash/index.html>`_).
 
 4. Review process:
 
-    * Reviewers (the other developers and interested community members) will
-      write inline and/or general comments on your Pull Request (PR) to help
-      you improve its implementation, documentation and style.  Every single
-      developer working on the project has their code reviewed, and we've come
-      to see it as friendly conversation from which we all learn and the
-      overall code quality benefits.  Therefore, please don't let the review
-      discourage you from contributing: its only aim is to improve the quality
-      of project, not to criticize (we are, after all, very grateful for the
-      time you're donating!).
+    * Reviewers (the other developers and interested community
+      members) will write inline and/or general comments on your Pull
+      Request (PR) to help you improve its implementation,
+      documentation and style.  Every single developer working on the
+      project has their code reviewed, and we've come to see it as
+      friendly conversation from which we all learn and the overall
+      code quality benefits.  Therefore, please don't let the review
+      discourage you from contributing: its only aim is to improve the
+      quality of the project, not to criticize (we are, after all,
+      very grateful for the time you're donating!). See `here
+      <https://github.com/thoughtbot/guides/tree/master/code-review>`_
+      for some nice code review guidelines.
 
     * To update your pull request, make your changes on your local repository
       and commit. As soon as those changes are pushed up (to the same branch as
@@ -106,7 +112,17 @@ If any conflicts occur in (e.g. conflict-file1 and conflict-file2), fix the acco
 
 Help in resolving merge conflicts is provided `here <https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/>`__.
 
-However, you should only rebase your own branches and must generally not
+In some cases, you'll want to edit your history while rebasing. This
+can be accomplished with the ``-i`` or ``--interactive`` option of
+``git rebase``. Running ``rebase`` with this option will open a text
+editor, where you can choose to remove or edit some commits, or squash
+several together. This allows you to (for example) edit commit
+messages, or merge together repetitive small commits like "fixed
+typo." See this `tutorial
+<https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history>`_
+for more details.
+
+Note: you should only rebase your own branches and must generally not
 rebase any branch which you collaborate on with someone else.
 
 Finally, you must push your rebased branch::
@@ -116,6 +132,7 @@ Finally, you must push your rebased branch::
 (If you are curious, here's a further discussion on the
 `dangers of rebasing <http://tinyurl.com/lll385>`__.
 Also see this `LWN article <http://tinyurl.com/nqcbkj>`__.)
+
 
 Guidelines
 ----------
