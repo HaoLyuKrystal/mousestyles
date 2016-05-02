@@ -5,9 +5,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 
-import matplotlib.pyplot as plt
-import statsmodels.api as sm
-
 import mousestyles.data as data
 
 
