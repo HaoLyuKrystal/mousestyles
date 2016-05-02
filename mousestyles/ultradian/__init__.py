@@ -14,7 +14,8 @@ def aggegate_interval(strain, mouse, feature, bin_width):
     intervals, return a time series.
 
     Parameters
-    ---------------
+    ----------
+
     strain: int
         nonnegative integer indicating the strain number
     mouse: int
@@ -23,7 +24,8 @@ def aggegate_interval(strain, mouse, feature, bin_width):
     bin_width: number of minutes of time interval for data aggregation
 
     Returns
-    ----------
+    -------
+
     ts: pandas.tseries
         a pandas time series of length 12(day)*24(hour)*60(minute)/n
     """
@@ -105,7 +107,7 @@ def aggregate_movement(strain, mouse, bin_width):
     time intervals, return a time series.
 
     Parameters
-    ---------------
+    ----------
     strain: int
         nonnegative integer indicating the strain number
     mouse: int
@@ -113,7 +115,7 @@ def aggregate_movement(strain, mouse, bin_width):
     bin_width: number of minutes of time interval for data aggregation
 
     Returns
-    ----------
+    -------
     ts: pandas.tseries
         a pandas time series of length (#day)*24(hour)*60(minute)/n
     """
